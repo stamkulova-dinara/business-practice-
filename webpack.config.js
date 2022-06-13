@@ -1,5 +1,4 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -21,22 +20,17 @@ module.exports = ({develop}) => ({
   },
   plugins: [
       new HtmlWebpackPlugin({
-          template: './src/index.html'
+          template: './src/index.pug'
       }),
       new MiniCssExtractPlugin({
-          filename: './styles/main.css'
-      }),
-      new CleanWebpackPlugin()
+          filename: './styles.css'
+      })
   ],
   module: {
       rules: [
           {
               test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
               type: 'asset/inline'
-          },
-          {
-              test: /\.html$/i,
-              loader: 'html-loader'
           },
           {
             test: /\.pug$/,
