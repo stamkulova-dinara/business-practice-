@@ -1,0 +1,77 @@
+extends ../../main.pug
+
+block content
+    section#main
+        .container
+            .d-flex.justify-content-between.content
+                img.main__road.position-absolute(src="../../assets/img/line.png", alt="")
+                img.bg-polygons(src="../../assets/icons/bg-polygons.svg", alt="bg")
+                .main__cube
+                    h2.title.text-uppercase Создаем решения
+                    h3.subtitle.text-uppercase Для роста бизнеса                 
+                    p.desc На основе анализа данных с алгоритмами реализации
+                    button.main-btn.uni_btn#open-modal(data-bs-toggle="modal" aria-labelledby="exampleModalToggleLabel" aria-hidden="true" tabindex="-1") Обсудить проблему
+                img.img_line2(src="../../assets/img/line2.png", alt="line2")
+                img.cube__img(src="../../assets/icons/cube.svg", alt="cube")
+        .container
+            .content.main-cards.d-flex.justify-content-between.flex-wrap
+                .main__card.d-flex
+                    img(src="../../assets/icons/card-logo.svg", alt="")
+                    a.main__card-text(href='#') Как найти точки роста и определить цели?
+                .main__card.d-flex
+                    img(src="../../assets/icons/card-logo.svg", alt="")
+                    a.main__card-text(href='#') Как увеличить прибыль, управляя ценами?
+                .main__card.d-flex
+                    img(src="../../assets/icons/card-logo.svg", alt="")
+                    a.main__card-text(href='#') Как избежать проблем на старте нового бизнеса?
+                .main__card.d-flex
+                    img(src="../../assets/icons/card-logo.svg", alt="")
+                    a.main__card-text(href='#') Как не попасть в "черную дыру" затрат на продвижение?
+                img.img_line3.position-absolute(src="../../assets/img/line3.png", alt="")
+    section#services
+        .container
+            .services__inner
+                img.position-absolute(src="../../assets/img/Polygon.png", alt="")
+                h2.services__title.position-relative услуги
+            .services__cards.d-flex.content
+                .col-4
+                    a.services__item-block(href="./services.html")
+                        .item-block__inform.col-8.plan
+                            img(src="../../assets/icons/report (1) 1 1.svg", alt="icon")
+                            p Разрабатываем маркетинг-план: дорожная карта достижения целей
+                .services__item.col-8 
+                    a.services__item-block.col-12.lamp(href="./services.html")
+                        .item-block__inform.col-8.d-flex.justify-content-between.align-items-center
+                            img(src="../../assets/icons/lamp.svg", alt="icon")
+                            p Повышаем эффективность продвижения: аудит существующей модели
+                    .d-flex.justify-content-between.col-12
+                        a.services__item-block.search(href="./services.html")
+                            .item-block__inform.col-8
+                                img(src="../../assets/icons/search.svg", alt="icon")
+                                p Находим скрытую прибыль: анализ модели ценообразования
+                        a.services__item-block.search(href="./services.html")
+                                .item-block__inform.col-8
+                                    img(src="../../assets/icons/Group.svg", alt="icon")
+                                    p Запускаем новый проект: start-up маркетинг
+   
+    //- .modal-page.d-none
+    //-     .modal-page__inner
+    //-         img.modal-page__close(src='../../assets/icons/close.svg', alt='close')
+    //-         .modal-page__item
+    //-             form#form.modal-page__form(onsubmit='return false;')
+    //-                 h2.modal-page__title Оставьте заявку
+    //-                 div
+    //-                     input.name(type='text', placeholder='Ваше имя', name='name')
+    //-                     p.warning-name-error 
+    //-                 div
+    //-                     input.email(type='email', placeholder='Email', name='email')
+    //-                     p.warning-email-error 
+    //-                 .textArea-input
+    //-                     textarea.big-text(type='text', placeholder='Пожалуйста опишите вашу проблему', name='big-text')
+    //-                     p.warning-big-text-error 
+    //-                 input.uni_btn.form__button-submit(type='submit' value="отправить")
+    //-                 p.successfully.d-none Ваша заявка успешно отправлена!
+
+    //- div.modal.fade#exampleModalToggle(href="#exampleModalToggle")
+    //-     .modal-dialog.modal-dialog-centered
+    //-         .modal-content

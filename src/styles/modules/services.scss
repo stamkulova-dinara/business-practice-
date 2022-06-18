@@ -1,0 +1,57 @@
+.services {
+    margin-top: 65px;
+    .bread-crumb {
+        margin-bottom: 42px;
+        font-size: 14px;
+        line-height: 16px;
+        .breadcrumb-link {
+            color: #9FA7B0;
+        }
+        .active_link {
+            color: #282C37;
+        }
+    }
+    .pol-img {
+        margin-left: calc(-30px);
+        top: 165px;
+    }
+    .ser-cube {
+        right: 0;
+        top: 130px;
+    }
+    .service-cards{
+        margin: 33px 0 69px 41px;
+
+        .service-card {
+            margin-bottom: 12px;
+            .service-card__text {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
+                margin: 0 0 0 41px;
+            }
+        }
+    }
+    .service-texts {
+        font-family: 'Lato' sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 36px 0 0 18px;
+        max-width: 1145px;
+    }
+    .service-text__link {
+        color: #4B9AFB;
+    }
+
+    .service-list  {
+        margin: 36px 0 0 76px;
+        .service-list__text {
+            margin: 0 0 0 19px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+}

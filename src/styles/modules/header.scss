@@ -1,0 +1,116 @@
+#header {
+    padding: 24px 0;
+    .menu,.mobail-menu__inner {
+        a {
+            font-family: 'Lato' sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #282C37;
+        }
+        .menu__link--active {
+            font-weight: 700;
+        }
+    }
+
+    .burger {
+        position: relative;
+        z-index: 50;
+        width: 36px;
+        height: 36px;
+        background-color: #FFFFFF;
+        border: 0px;
+
+        span {
+            width: 24px;
+            height: 2.5px;
+            margin-left: 6px;
+            margin-top: 0px;
+            position: absolute;
+            background-color: #282C37;
+            left: 0%;
+            top: 0%;
+            z-index: 20;
+            transition: all ease 0.5s;
+        }
+    }
+
+    .burger span:nth-of-type(1) {
+        top: 50%;
+    }
+
+    .burger span:nth-of-type(2) {
+        top: calc(50% - 8px);
+    }
+
+    .burger span:nth-of-type(3) {
+        top: calc(50% + 8px);
+    }
+
+    .burger.active span:first-of-type {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .burger.active span:nth-of-type(2) {
+        top: 50%;
+        transform: rotate(405deg);
+    }
+
+    .burger.active span:nth-of-type(3) {
+        top: 50%;
+        transform: rotate(-405deg);
+    }
+
+    .mobail-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 51;
+        width: 100%;
+        height: 100%;
+        transform: translate(300%);
+        background-color: #FFFFFF;
+        transition: all ease 0.5s;
+        .mobail-menu__close-icon{
+            margin-top: 24px;
+            width: 24px;
+        }
+        .mobail-menu__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;               
+            top: 50%;   
+            left: 0px;
+            right: 0px;                      
+            transform: translate(0, -50%);
+            .mobile-menu__logo{
+                margin-bottom: 80px;
+            }
+            a{
+                margin-bottom: 45px;
+            }
+            .social-media{
+                width: 152px;
+                margin-top: 71px;
+            }
+        }
+    }
+
+    .mobail-menu--active {
+        transform: translateX(0px);
+        transition-duration: all ease-in-out 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    #header {
+        padding: 16px 0px;
+        .menu {
+            display: none !important;
+        }
+    }
+}
