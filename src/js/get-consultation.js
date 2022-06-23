@@ -61,12 +61,12 @@ export const getConsultationFormValidate = () => {
         }
     }
 
-    // form.addEventListener('submit',  function(e) {
-    //     e.preventDefault();
-    //    checkEmail()
-    //    checkName()
-    //    console.log(name.value, email.value);
-    //    initOnchange([name, email])
-    //    sendFrom()
-    // })
+    form.addEventListener('submit',  function(e) {
+        e.preventDefault(),
+        checkEmail()
+        checkName()
+        console.log(name.value, email.value);
+        initOnchange([name, email])
+        sendFrom()
+    })
 }

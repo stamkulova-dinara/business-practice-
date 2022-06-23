@@ -78,12 +78,12 @@ export const formValidate = () => {
         });
       }
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        checkEmail()
-        check()
-        checkField()
-        checkField2()
-        initOnchange([name, email, textarea])
-    })
+    // form.addEventListener('submit', e => {
+    //     e.preventDefault()
+    //     checkEmail()
+    //     check()
+    //     checkField()
+    //     checkField2()
+    //     initOnchange([name, email, textarea])
+    // })
 }
