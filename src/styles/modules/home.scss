@@ -525,7 +525,7 @@
                     font-style: normal;
                     font-weight: 700;
                     font-size: 18px;
-line-height: 22px;
+                    line-height: 22px;
                     text-transform: uppercase;
                     color: #282C37;
                     margin-bottom: 19px;
@@ -537,7 +537,7 @@ line-height: 22px;
                     font-style: normal;
                     font-weight: 400;
                     font-size: 14px;
-line-height: 17px;
+                    line-height: 17px;
                     color: #282C37;
                     margin-bottom: 30px;
                 }
@@ -547,36 +547,36 @@ line-height: 17px;
             .cube-img {
                 .cube-img__logo {
                        #cube {
-        width: 100%;
-        height: auto;
-        padding-top: 110px;
-        padding-bottom: 160px;
-        .cube-container {
-            margin: auto;
-            max-width: 1173px;
-            height: auto;
-            gap: 50px;
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-            
-            .arrow__mobile {
-                display: none;
-            }
-            .cube-ipad__line-up {
-                display: none;
-            }
-            .cube-ipad__line-bot {
-                display: none;
-            }
-    
-            .cube-web__line-up {
-                position: absolute;
-                max-width: 60%;
-                top: -15px;
-                left: 19%;
-                z-index: -1;
-            }
+                            width: 100%;
+                            height: auto;
+                            padding-top: 110px;
+                            padding-bottom: 160px;
+                        .cube-container {
+                            margin: auto;
+                            max-width: 1173px;
+                            height: auto;
+                            gap: 50px;
+                            display: flex;
+                            justify-content: space-between;
+                            position: relative;
+                            
+                        .arrow__mobile {
+                            display: none;
+                        }
+                        .cube-ipad__line-up {
+                            display: none;
+                        }
+                        .cube-ipad__line-bot {
+                            display: none;
+                        }
+                    
+                        .cube-web__line-up {
+                            position: absolute;
+                            max-width: 60%;
+                            top: -15px;
+                            left: 19%;
+                            z-index: -1;
+                        }
     
             .cube-text {
                 margin-left: 32px;
