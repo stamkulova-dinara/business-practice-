@@ -1,0 +1,97 @@
+#modal-content {
+    border-radius: 0 !important;
+    max-width: 375px !important;
+
+    .modal-box {
+        .modal-title {
+            font-size: 22px;
+            line-height: 26px;
+            font-family: "Lato" sans-serif;
+            font-weight: 700;
+            letter-spacing: 3%;
+            margin: 21px 0 34px 0;
+        }
+        
+        .btn-close {
+            margin: 24px 0 0 28px;
+            width: 24px;
+            height: 24px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .modal-form {
+            input {
+                width: 292px;
+                height: 50px;
+                align-items: center;
+                padding-left: 21px;
+                border-radius: 8px;
+                // margin-top: 4px;
+                margin-bottom: 6px;
+                border: 1px solid #282C37;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .textarea {
+                padding: 14px 23px 0 21px;
+                width: 292px;
+                height: 191px;
+                border-radius: 8px;
+                margin: 2px 0 6px 0;
+                border: 1px solid #282C37;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+            .modal-send-btn {
+                width: 292px;
+                height: 48px;
+                margin-bottom: 171px;
+            }
+            .success-notification {
+                color: #30B01E;
+                font-weight: 700;
+                bottom: 75px;
+                margin-left: 62px;
+                max-width: 248px;
+                display: none;
+            }
+        }
+        .warning-email-error, .warning-name-error, .warning-textarea-error {
+            color: #CF4747;
+            font-size: 14px;
+            line-height: 17px;
+            margin-left: 45px;
+            text-align: start;
+            margin-bottom: 5px;
+            height: 10px;
+        }
+    }
+}
+
+
+// .modal-window {
+//     position: fixed; 
+//     z-index: 10; 
+//     padding-top: 100px; 
+//     left: 0;
+//     top: 0;
+//     width: 100%; 
+//     height: 100%; 
+//     overflow: auto;
+//     background-color: rgb(0,0,0); 
+//     background-color: rgba(0,0,0,0.4); 
+
+//     .modal-contents {
+//         background-color: #fefefe;
+//         margin: auto;
+//         padding: 20px;
+//         border: 1px solid #888;
+//         max-width: 375px;
+//       }
+// }

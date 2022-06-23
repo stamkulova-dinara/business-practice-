@@ -1,0 +1,49 @@
+.img-cube {
+    right: 0;
+    top: 125px;
+    position: absolute;
+}
+.training {
+    margin: 65px 0 88px 0;
+
+    .train-pol-img {
+        top: 169px;
+        margin-left: calc(-24px);
+    }
+    .advantages-item {
+        box-shadow: 4px 4px 20px 0px #282C3733;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        padding: 39px 38px;
+        margin-top: 50px;
+    
+        .advan-title {
+            padding-right: 8px;
+            margin-bottom: 27px;
+        }
+        .trainnig-btn {
+            padding: 0 23px;
+            width: 229px;
+            height: 48px;
+            border-radius: 8px;
+            background-color:#4B9AFB;
+            border: none;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+    
+            &:hover {
+                background-color: #287EE7;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    .advantages-item {
+        flex-wrap: wrap;
+    }
+}

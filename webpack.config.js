@@ -39,9 +39,7 @@ module.exports = ({develop}) => ({
   plugins: [
     ...templates,
     new HtmlWebpackPugPlugin(),
-      new MiniCssExtractPlugin({
-          filename: './styles.css'
-      }),
+      new MiniCssExtractPlugin({ filename: './styles.css'}),
       new CopyWebpackPlugin({
         patterns: [
             {
@@ -53,10 +51,10 @@ module.exports = ({develop}) => ({
   ],
   module: {
       rules: [
-        {
-          test: /\.css$/i,
-          use: ["css-loader"],
-        },
+        // {
+        //   test: /\.css$/i,
+        //   use: ["css-loader"],
+        // },
         {
           test: /\.(?:ico|png|jpg|jpeg|svg)$/i,
           type: 'asset/inline'
@@ -70,19 +68,8 @@ module.exports = ({develop}) => ({
         },
         {
           test: /\.scss$/i,
-          // use: [
-          //   MiniCssExtractPlugin.loader,
-          //   "css-loader",
-          //   "resolve-url-loader",
-          //   {
-          //     loader: "sass-loader",
-          //     options: {
-          //       sourceMap: true,
-          //     },
-          //   },
-          // ],
           use: [
-            MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+            MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader',
           ]
         }
       ]

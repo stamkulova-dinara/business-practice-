@@ -1,5 +1,18 @@
 extends ../../main.pug
+include ../mixin/trainingCard.pug
 
 block content
-    .container
-        p trainig
+    include ../data/training-data.pug
+    section.training
+        .container
+            nav.bread-crumb(aria-label="breadcrumb")
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a.breadcrumb-link(href='./index.html') Главная
+                    li.breadcrumb-item.active.active_link(aria-current="page") Тренинг
+        .container.col-lg-12
+            img.train-pol-img.position-absolute(src="../../assets/img/Polygon.png", alt="")
+            img.img-cube(src="../../assets/icons/cube-service-page.svg", alt="")
+
+            each item in trainingData
+                +trainingCard(item)

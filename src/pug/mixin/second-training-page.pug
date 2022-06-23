@@ -1,0 +1,13 @@
+mixin listTraing(plan)
+    .d-flex.mb-1.mt-3.align-items-start
+        if plan.img
+            img.mt-2.train-info__img(src="../../assets/icons/round.svg" alt="")
+        p.mb-0 #{plan.text}
+
+mixin traininInfo(info)
+    .train-info.mb-5
+        h4.train-info__title #{info.title}
+        .train-info__lists
+            each plan in info.plans
+                +listTraing(plan)
+

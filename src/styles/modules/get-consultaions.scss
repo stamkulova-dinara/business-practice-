@@ -1,13 +1,14 @@
 .medium-polygon {
-    margin: 83px 0 0 152px;
+    margin: 0 0 0 152px;
 }
 
 .small-polygon {
-    margin: calc(-310px) 0 0 45px;
+    margin: calc(-298px) 0 0 45px;
 }
 
 .big-polygon {
-    margin: calc(-319px) 0 0 872px;
+    right: 10%;
+    margin-top: calc(-309px);
 }
 
 .get-consultation {
@@ -17,15 +18,14 @@
     border-radius: 20px;
     background-color: #FFFFFF;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin: 154px 0 94px 0;
+    margin: 65px 0 94px 55px;
 
     .get-consultation__inp {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
         height: 50px;
-        font-style: italic;
         width: 530px;
-        margin-bottom: 23px;
+        // margin-bottom: 25px;
         padding-left: 21px;
         border-radius: 8px;
         border: 1px solid #9FA7B0;
@@ -34,8 +34,19 @@
             outline: none;
         }
     }
+    .name-error, .email-error {
+        color: #CF4747;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 0 0 5px;
+        display: none;
+    }
     .get-consultation__btn {
         width: 530px;
         height: 48px;
+    }
+    .success-notif {
+        color: #30B01E;
+        display: none;
     }
 }

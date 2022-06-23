@@ -1,77 +1,83 @@
 extends ../../main.pug
 
 block content
-    section#main
+    section#cube
         .container
-            .d-flex.justify-content-between.content
-                img.main__road.position-absolute(src="../../assets/img/line.png", alt="")
-                img.bg-polygons(src="../../assets/icons/bg-polygons.svg", alt="bg")
-                .main__cube
-                    h2.title.text-uppercase Создаем решения
-                    h3.subtitle.text-uppercase Для роста бизнеса                 
-                    p.desc На основе анализа данных с алгоритмами реализации
-                    button.main-btn.uni_btn#open-modal(data-bs-toggle="modal" aria-labelledby="exampleModalToggleLabel" aria-hidden="true" tabindex="-1") Обсудить проблему
-                img.img_line2(src="../../assets/img/line2.png", alt="line2")
-                img.cube__img(src="../../assets/icons/cube.svg", alt="cube")
+            .cube-container
+                svg.arrow__mobile(width='53' height='52' viewbox='0 0 53 52' fill='none' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M25.963 51.963C25.0965 51.9647 24.2568 51.6629 23.5896 51.1101L1.33964 32.5684C0.582341 31.9389 0.1061 31.0344 0.0156918 30.0539C-0.0747164 29.0733 0.228113 28.0969 0.85756 27.3396C1.48701 26.5823 2.39151 26.1061 3.37209 26.0157C4.35267 25.9253 5.32901 26.2281 6.08631 26.8576L25.963 43.4709L45.8397 27.4509C46.219 27.1429 46.6554 26.9128 47.1239 26.774C47.5924 26.6352 48.0838 26.5904 48.5697 26.642C49.0556 26.6937 49.5264 26.8409 49.9553 27.0752C50.3841 27.3095 50.7624 27.6262 51.0684 28.0071C51.408 28.3884 51.6652 28.8358 51.8239 29.3211C51.9826 29.8064 52.0393 30.3193 51.9906 30.8275C51.9419 31.3358 51.7887 31.8286 51.5407 32.2749C51.2926 32.7212 50.9551 33.1115 50.5492 33.4213L28.2992 51.3326C27.6129 51.798 26.7903 52.02 25.963 51.963V51.963Z' fill='#EBF2FC')
+                    path(d='M25.963 25.963C25.0965 25.9647 24.2568 25.6629 23.5896 25.1101L1.33964 6.5684C0.582341 5.93895 0.1061 5.03444 0.0156918 4.05386C-0.0747164 3.07328 0.228113 2.09695 0.85756 1.33964C1.48701 0.582339 2.39151 0.1061 3.37209 0.0156919C4.35267 -0.0747163 5.32901 0.228111 6.08631 0.857559L25.963 17.4709L45.8397 1.45089C46.219 1.14286 46.6554 0.912824 47.1239 0.774015C47.5924 0.635206 48.0838 0.590358 48.5697 0.642049C49.0556 0.69374 49.5264 0.840949 49.9553 1.07522C50.3841 1.30949 50.7624 1.6262 51.0684 2.00714C51.408 2.38844 51.6652 2.83576 51.8239 3.32109C51.9826 3.80641 52.0393 4.31927 51.9906 4.82755C51.9419 5.33583 51.7887 5.82856 51.5407 6.27488C51.2926 6.72121 50.9551 7.1115 50.5492 7.42131L28.2992 25.3326C27.6129 25.798 26.7903 26.02 25.963 25.963V25.963Z' fill='#EBF2FC')
+
+                img.cube-web__line-up(src="../../assets/img/line.png", alt="")
+                .cube-text
+                    img.cube-text__line-cube(src="../../assets/icons/bg-polygons.svg", alt="")
+                    p.cube-text__first-title Создаем решения
+                    p.cube-text__second-title Для роста бизнеса
+                    p.cube-text__description На основе анализа данных с алгоритмами реализации
+                    button.main-btn.uni_btn(data-bs-toggle="modal" href="#modal") Обсудить проблему
+                .cube-img
+                    img.cube-img__logo(src="../../assets/icons/cube.svg", alt="")
+                img.cube-web__line-bot(src="../../assets/img/line2.png", alt="")
+    section#quetion
         .container
-            .content.main-cards.d-flex.justify-content-between.flex-wrap
-                .main__card.d-flex
-                    img(src="../../assets/icons/card-logo.svg", alt="")
-                    a.main__card-text(href='#') Как найти точки роста и определить цели?
-                .main__card.d-flex
-                    img(src="../../assets/icons/card-logo.svg", alt="")
-                    a.main__card-text(href='#') Как увеличить прибыль, управляя ценами?
-                .main__card.d-flex
-                    img(src="../../assets/icons/card-logo.svg", alt="")
-                    a.main__card-text(href='#') Как избежать проблем на старте нового бизнеса?
-                .main__card.d-flex
-                    img(src="../../assets/icons/card-logo.svg", alt="")
-                    a.main__card-text(href='#') Как не попасть в "черную дыру" затрат на продвижение?
-                img.img_line3.position-absolute(src="../../assets/img/line3.png", alt="")
+            .quetion-container
+                .quetion-col__first
+                    .quetion-block
+                        img.quetion__img(src="../../assets/icons/card-logo.svg", alt="")
+                        p.quetion__text Как найти точки роста и определить цели?
+                    .quetion-block 
+                        img.quetion__img(src="../../assets/icons/card-logo.svg", alt="")
+                        p.quetion__text Как избежать проблем на старте нового бизнеса?
+                .quetion-col__second        
+                    .quetion-block 
+                        img.quetion__img(src="../../assets/icons/card-logo.svg", alt="")
+                        p.quetion__text Как увеличить прибыль, управляя ценами?
+                    .quetion-block 
+                        img.quetion__img(src="../../assets/icons/card-logo.svg", alt="")
+                        p.quetion__text Как не попасть в "черную дыру" затрат на продвижение?
     section#services
         .container
+            img.secvices-line__img(src="../../assets/img/line3.png", alt="")
             .services__inner
-                img.position-absolute(src="../../assets/img/Polygon.png", alt="")
-                h2.services__title.position-relative услуги
-            .services__cards.d-flex.content
+                img.services__cube-img(src="../../assets/img/Polygon.png", alt="")
+                h2.services__title услуги
+            .services__cards.d-flex
                 .col-4
-                    a.services__item-block(href="./services.html")
-                        .item-block__inform.col-8.plan
-                            img(src="../../assets/icons/report (1) 1 1.svg", alt="icon")
+                    .services__item-block.col-8.plan
+                        img(src="../../assets/icons/report.svg", alt="icon")
+                        a(href="./services.html") 
                             p Разрабатываем маркетинг-план: дорожная карта достижения целей
                 .services__item.col-8 
-                    a.services__item-block.col-12.lamp(href="./services.html")
-                        .item-block__inform.col-8.d-flex.justify-content-between.align-items-center
-                            img(src="../../assets/icons/lamp.svg", alt="icon")
-                            p Повышаем эффективность продвижения: аудит существующей модели
-                    .d-flex.justify-content-between.col-12
-                        a.services__item-block.search(href="./services.html")
-                            .item-block__inform.col-8
-                                img(src="../../assets/icons/search.svg", alt="icon")
+                    .services__item-block.col-12.lamp
+                        img.lamp__img(src="../../assets/icons/lamp.svg", alt="icon")
+                        a(href="./services.html") 
+                            p.item-block__inform-text Повышаем эффективность продвижения: аудит существующей модели
+                    .services__item-block-second.col-12
+                        .services__item-block.search
+                            img(src="../../assets/icons/search.svg", alt="icon")
+                            a(href="./services.html") 
                                 p Находим скрытую прибыль: анализ модели ценообразования
-                        a.services__item-block.search(href="./services.html")
-                                .item-block__inform.col-8
-                                    img(src="../../assets/icons/Group.svg", alt="icon")
-                                    p Запускаем новый проект: start-up маркетинг
+                        .services__item-block.search
+                            img(src="../../assets/icons/Group.svg", alt="icon")
+                            a(href="./services.html")
+                                p Запускаем новый проект: start-up маркетинг
    
-    //- .modal-page.d-none
-    //-     .modal-page__inner
-    //-         img.modal-page__close(src='../../assets/icons/close.svg', alt='close')
-    //-         .modal-page__item
-    //-             form#form.modal-page__form(onsubmit='return false;')
-    //-                 h2.modal-page__title Оставьте заявку
-    //-                 div
-    //-                     input.name(type='text', placeholder='Ваше имя', name='name')
-    //-                     p.warning-name-error 
-    //-                 div
-    //-                     input.email(type='email', placeholder='Email', name='email')
-    //-                     p.warning-email-error 
-    //-                 .textArea-input
-    //-                     textarea.big-text(type='text', placeholder='Пожалуйста опишите вашу проблему', name='big-text')
-    //-                     p.warning-big-text-error 
-    //-                 input.uni_btn.form__button-submit(type='submit' value="отправить")
-    //-                 p.successfully.d-none Ваша заявка успешно отправлена!
-
-    //- div.modal.fade#exampleModalToggle(href="#exampleModalToggle")
-    //-     .modal-dialog.modal-dialog-centered
-    //-         .modal-content
+    .modal.fade#modal(aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1")
+        .modal-dialog.modal-dialog-centered
+            .modal-content#modal-content
+                .modal-box
+                    img.btn-close(src="../../assets/icons/close.svg", alt="" data-bs-dismiss="modal")
+                    .modal-page.text-center.mt-5.pt-5
+                        h3.modal-title.text-uppercase Оставьте заявку
+                        form.modal-form
+                            div
+                                input.name(type="text" placeholder='Ваше имя', name='name')
+                                p.warning-name-error
+                            div 
+                                input.email(type='email', placeholder='Email', name='email')
+                                p.warning-email-error
+                            div 
+                                textarea.textarea(name="textarea" placeholder='Пожалуйста опишите вашу проблему') 
+                                p.warning-textarea-error
+                            button.uni_btn.modal-send-btn.align-items-center(type="submit") Отправить
+                            p.position-absolute.success-notification.text Ваша заявка успешно отправлена!

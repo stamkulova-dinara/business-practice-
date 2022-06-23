@@ -10,10 +10,6 @@ export const mobileMenu = () => {
     const burgerBtn=document.querySelector('.burger');
     const closeMenu=document.querySelector(".mobail-menu__close-icon");
 
-    closeMenu.addEventListener("click", ()=> {
-        toggleMenu();
-    }) 
-    burgerBtn.addEventListener("click", ()=> {
-        toggleMenu();
-    }) 
+    closeMenu.addEventListener("click", toggleMenu()) 
+    burgerBtn.addEventListener("click", toggleMenu()) 
 }

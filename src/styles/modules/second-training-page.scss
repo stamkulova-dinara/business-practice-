@@ -1,0 +1,28 @@
+.train-info  {
+    .train-info__title {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+        color: #282C37;
+    }
+    .train-info__lists {
+        margin-left: 40px;
+        .train-info__img {
+            margin-right: 20px;
+        }
+    }
+}
+
+.train-info__advan {
+    padding-left: 42px;
+}
+
+.train-info__btn {
+    margin: 50px 0 162px 42px;
+    height: 48px;
+    padding: 0 28px 0 88px;
+
+    svg {
+        margin-left: 43px;
+    }
+}

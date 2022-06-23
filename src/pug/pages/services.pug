@@ -11,8 +11,8 @@ block content
                         a.breadcrumb-link(href="#") Услуги
                     li.breadcrumb-item.active.active_link(aria-current="page") Разрабатываем маркетинг-план: дорожная карта достижения целей
         .container
-            .content
-                img.pol-img.position-absolute(src="../../assets/Polygon.png", alt="")
+            .col-12
+                img.pol-img.position-absolute(src="../../assets/img/Polygon.png", alt="")
                 h2.title.position-relative Разрабатываем маркетинг-план: дорожная карта достижения целей
                 img.ser-cube.position-absolute(src="../../assets/icons/cube-service-page.svg", alt="image")
                 .service-cards 
@@ -32,7 +32,7 @@ block content
                         img(src="../../assets/icons/ser-card-logo.svg", alt="")
                         p.service-card__text Разрабатываем план и модель контроля его выполнения
                 h3.subtitle Описание услуги
-                .service-texts
+                .text.sevices-text
                     p Любая компания ставит себе цель непрерывного развития, которая отражается в итоговом плане действий по ее достижению. Основным измерением достижения цели является рост прибыли по результатам планируемого периода. Понимание траектории развития рынка, положения и стратегий его основных участников, позволяет правильно оценить свои возможности и поставить объективно достижимые цели. 
                     p.pt-2 Конкретный план действий по достижению целей разрабатывается на основе потребительских трендов и прогноза действий конкурентов.
                     p.pt-1 Математическая модель контроля позволяет на основе сравнения плановых и фактических измеряемых величин контролировать ситуацию и своевременно предпринимать необходимые действия.
@@ -61,21 +61,4 @@ block content
                         svg.mt-1(width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg")
                             circle(cx="5.5" cy="5.5" r="5.5" fill="#A5CBF9")
                         p.service-list__text Совместное обсуждение целей и плана действий
-        include ../includes/getconsultation.pug
-        //- .container 
-        //-     .content
-        //-         img.position-absolute(src="../../assets/icons/polygon-medium.svg", alt="")
-        //-         .d-flex.justify-content-center
-        //-             .get-consultation.position-relative
-        //-                 form
-        //-                     input.get-consultation__inp(type="text" placeholder='Ваше имя')
-        //-                     input.get-consultation__inp(type="email" placeholder='Email')
-        //-                     button.get-consultation__btn.uni_btn Получить консультацию
-        //-         img.position-absolute(src="../../assets/icons/polygon-small.svg", alt="")
-        //-         img.position-absolute(src="../../assets/icons/polygon-big.svg", alt="")
-
-
-
-
-
-
+        include ../includes/get-consultation

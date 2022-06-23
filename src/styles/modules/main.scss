@@ -4,8 +4,8 @@
     padding: 0;
 }
 
-.content {
-    max-width: 1173px;
+body {
+    color: #282C37;
 }
 
 a {
@@ -55,7 +55,6 @@ a {
     font-size: 44px;
     line-height: 54px;
     font-family: Montserrat;
-    // letter-spacing: 0.9;
 }
 
 .subtitle {
@@ -71,4 +70,41 @@ a {
     max-width: 475px;
     margin: 19px 0 32px 0;
     font-weight: 400;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: 'Lato' sans-serif;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.advan-list {
+    margin-bottom: 16px;
+    .list-logo-img {
+        margin-right: 41px;
+    }
+}
+
+.input-err {
+    border: 1px solid #CF4747 !important;
+}
+
+.success {
+    background-color: #9FA7B0 !important;
+}
+
+@media (max-width: 768px) {
+    // .title {
+    //     font-size: 28px;
+    //     line-height: 34px;
+    // }
+    // .subtitle {
+    //     font-size: 18px;
+    //     line-height: 22px;
+    // }
 }
