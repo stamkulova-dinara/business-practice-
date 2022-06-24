@@ -77,6 +77,9 @@
         .mobail-menu__close-icon{
             margin-top: 24px;
             width: 24px;
+            &:hover {
+                cursor: pointer;
+            }
         }
         .mobail-menu__inner {
             display: flex;

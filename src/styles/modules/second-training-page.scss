@@ -26,3 +26,25 @@
         margin-left: 43px;
     }
 }
+
+.cubes {
+    margin-top: 780px;
+    right: 0;
+}
+
+@media (max-width: 768px)  {
+    .train-info__btn {
+        margin: 50px 0 ;
+        padding: 0 28px;
+    }
+    .train-info__lists {
+        margin-left: 0;
+        .train-info__img {
+            margin-right: 15px;
+        }
+    }
+
+    .train-info__advan {
+        padding-left: 0;
+    }
+}

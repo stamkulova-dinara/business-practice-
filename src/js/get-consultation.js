@@ -1,39 +1,35 @@
-const form = document.querySelector('.get-consultation__form'),
-    email = document.querySelector('.form-email'),
-    name = document.querySelector('.form-name'),
-    emailError = document.querySelector('.email-error'),
-    nameError = document.querySelector('.name-error'),
-    btn = document.querySelector('.get-consultation__btn'),
-    success = document.querySelector('.success-notif')
-
+const emailCon = document.querySelector('.form-email'),
+      nameCon = document.querySelector('.form-name'),
+      emailErrorCon = document.querySelector('.email-error'),
+      nameErrorCon = document.querySelector('.name-error'),
+      btng = document.querySelector('.get-consultation__btn'),
+      successCon = document.querySelector('.success-notif')
 
 export const getConsultationFormValidate = () => {
     function checkEmail() {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if(re.test(email.value.trim())) {
-                emailError.style.display = 'none'
-                email.classList.remove('input-err')
-                emailErr = true
+            if(re.test(emailCon.value.trim())) {
+                emailErrorCon.style.display = 'none'
+                emailCon.classList.remove('input-err')
+                emailErrC = true
             }else {
-                email.classList.add('input-err')
-                emailError.style.display = 'block'
-                emailErr = false
+                emailCon.classList.add('input-err')
+                emailErrorCon.style.display = 'block'
+                emailErrC = false
             }
     }
-
-    let nameErr;
-    let emailErr;
+    let emailErrC;
 
     const checkName = () => {
-        if(!name.value) {
-            name.classList.add('input-err')
-            nameError.style.display = 'block'
-        } else if(name.value.length < 3) {
-            name.classList.add('input-err')
-            nameError.style.display = 'block'
+        if(!nameCon.value) {
+            nameCon.classList.add('input-err')
+            nameErrorCon.style.display = 'block'
+        } else if(nameCon.value.length < 3) {
+            nameCon.classList.add('input-err')
+            nameErrorCon.style.display = 'block'
         } else {
-            name.classList.remove('input-err')
-            nameError.style.display = 'none'
+            nameCon.classList.remove('input-err')
+            nameErrorCon.style.display = 'none'
         }
     }
 
@@ -46,27 +42,28 @@ export const getConsultationFormValidate = () => {
         });
     }
 
-    const sendFrom = () => {
-        if(emailErr == true && name.value) {
-            btn.textContent = 'идет отправка...'
-            btn.classList.add('success')
-            success.style.display = 'block'
-
+    const sendData = () => {
+        if(emailErrC == true && nameCon.value) {
+            btng.textContent = 'идет отправка...'
+            btng.classList.add('success')
+            successCon.style.display = 'block'
+            console.log({
+                name: nameCon.value, 
+                email: emailCon.value
+            });
             setTimeout(() => {
-                name.value = ''; email.value = ''
-                btn.textContent = 'Получить консультацию'
-                btn.classList.remove('success')
-                success.style.display = 'none'
+                nameCon.value = ''; emailCon.value = ''
+                btng.textContent = 'Получить консультацию'
+                btng.classList.remove('success')
+                successCon.style.display = 'none'
             }, 2000);
         }
     }
 
-    form.addEventListener('submit',  function(e) {
-        e.preventDefault(),
+    btng?.addEventListener('click', () => {
         checkEmail()
         checkName()
-        console.log(name.value, email.value);
-        initOnchange([name, email])
-        sendFrom()
+        initOnchange([nameCon, emailCon])
+        sendData()
     })
 }

@@ -1,4 +1,4 @@
-.services {
+.services-page {
     margin-top: 65px;
     .pol-img {
         margin-left: calc(-30px);
@@ -41,6 +41,27 @@
     }
 }
 
-@media (max-width: 992px) {
-    
+@media (max-width: 952px) {
+    .services-page {
+        margin-bottom: 85px;
+    }
+}
+
+@media (max-width: 540px) {
+    .service-cards{
+        margin: 33px 0 !important;
+        .service-card__text {
+            font-size: 15px !important;
+            line-height: 25px !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    .service-list  {
+        margin: 36px 0 50px 40px !important;
+        .service-list__text {
+            margin: 0 0 0 15px !important;
+            font-size: 14px !important;
+        }
+    }
 }

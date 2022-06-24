@@ -58,6 +58,21 @@
 
 @media (max-width: 576px) {
     .advantages-item {
-        padding: 28px;
+        padding: 25px !important;
+        .advan-title {
+            padding-right: 0 !important;
+            margin-bottom: 12px !important;
+        }
+        .trainnig-btn {
+            width: 175px !important;
+            padding: 0 15px !important;
+            height: 35px !important;
+            font-size: 15px !important;
+        }
+
+        .list-text {
+            font-size: 14px;
+        }
     }
+
 }

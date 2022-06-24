@@ -1,7 +1,4 @@
-// import {Modal} from 'bootstrap/dist/js/bootstrap.bundle.js'
-import {Modal} from "bootstrap/js/src/modal";
-
-const form = document.querySelector('.modal-form'),
+const formModal = document.querySelector('.modal-form'),
       name = document.querySelector('.name'),
       email = document.querySelector('.email'),
       textarea = document.querySelector('.textarea'),
@@ -10,10 +7,14 @@ const form = document.querySelector('.modal-form'),
       emailError = document.querySelector('.warning-email-error'),
       btn = document.querySelector('.modal-send-btn'),
       success = document.querySelector('.success-notification'),
-      modalDiv = document.querySelector('#modal')
+      btnClose = document.querySelector('.modal-page__close'),
+      modal = document.querySelector('.modal-page')
 
 export const formValidate = () => {
-    function checkEmail() {
+    let errInput = [emailError, nameError, textError]
+    let inputs = [name, email, textarea]
+
+    const checkEmail = () => {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(re.test(email.value.trim())) {
             emailError.textContent = ""
@@ -29,9 +30,18 @@ export const formValidate = () => {
             btn.textContent = "идет отправка..."
             btn.classList.add('success')
             success.style.display = "block"
+            console.log({
+                name: name.value,
+                emai: email.value,
+                text: textarea.value
+            });
 
             setTimeout(() => {
-                modalDiv.Modal('hide')
+               modal.style.display = 'none'
+               inputs.forEach(i => i.value = '')
+               btn.textContent = "отправить"
+                btn.classList.remove('success')
+                success.style.display = "none"
             }, 2000);
 
         }
@@ -51,12 +61,9 @@ export const formValidate = () => {
     }
 
     const checkField2 = () => {
-        if(!textarea.value) {
+        if(textarea.value.length < 3) {
             textarea.classList.add('input-err')
             textError.textContent = 'поле обязательно*'
-        } else if(textarea.value.length < 3) {
-            textarea.classList.add('input-err')
-            textError.textContent = 'длина должна быть не менее 3 символов'
         } else {
             textarea.classList.remove('input-err')
             textError.textContent = ''
@@ -76,14 +83,23 @@ export const formValidate = () => {
             }
           });
         });
-      }
+    }
+    const cleanform = () => {
+        btnClose.addEventListener("click", () => {
+            if(emailError.textContent && nameError.textContent && textError.textContent)  {
+                errInput.forEach(el => el.textContent = '')
+                inputs.forEach(e => e.classList.remove('input-err'))
+            } 
+        })
+    }
 
-    // form.addEventListener('submit', e => {
-    //     e.preventDefault()
-    //     checkEmail()
-    //     check()
-    //     checkField()
-    //     checkField2()
-    //     initOnchange([name, email, textarea])
-    // })
+    formModal?.addEventListener('submit', e => {
+        e.preventDefault()
+        checkEmail()
+        check()
+        checkField()
+        checkField2()
+        initOnchange([name, email, textarea])
+        cleanform()
+    })
 }

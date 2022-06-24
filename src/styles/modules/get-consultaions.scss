@@ -25,7 +25,6 @@
         font-weight: 400;
         height: 50px;
         width: 530px;
-        // margin-bottom: 25px;
         padding-left: 21px;
         border-radius: 8px;
         border: 1px solid #9FA7B0;
@@ -49,4 +48,40 @@
         color: #30B01E;
         display: none;
     }
+}
+
+@media (max-width: 952px) {
+    .big-polygon, .small-polygon, .medium-polygon {
+        display: none;
+    }
+
+    .get-consultation {
+        margin: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .get-consultation__inp, .get-consultation__btn {
+        width: 100% !important;
+    }
+    .get-consultation__box {
+        display: block !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .get-consultation {
+        padding: 50px 32px;
+
+        .get-consultation__btn {
+           padding: 0;
+           font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+        .get-consultation__btn {
+           font-size: 12px !important;
+        }
 }
