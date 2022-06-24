@@ -353,10 +353,14 @@
   .start-up {
     width: 20% !important;
   }
+  .main__card {
+    margin-left: 10px;
+  }
   .services {
     margin-top: 30px;
     &-line {
       margin-left: -22px;
+      margin-top: -30px;
     }
     &-octagon {
       margin-bottom: -22px;
@@ -364,6 +368,8 @@
 
     &-title {
       margin: -48px 0 0 20px;
+      letter-spacing: 0;
+      font-weight: 700;
     }
 
     & > .row {
