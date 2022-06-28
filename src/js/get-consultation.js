@@ -46,17 +46,20 @@ export const getConsultationFormValidate = () => {
         if(emailErrC == true && nameCon.value) {
             btng.textContent = 'идет отправка...'
             btng.classList.add('success')
-            successCon.style.display = 'block'
             console.log({
                 name: nameCon.value, 
                 email: emailCon.value
             });
             setTimeout(() => {
+                successCon.style.display = 'block'
+            }, 2000);
+
+            setTimeout(() => {
                 nameCon.value = ''; emailCon.value = ''
                 btng.textContent = 'Получить консультацию'
                 btng.classList.remove('success')
                 successCon.style.display = 'none'
-            }, 2000);
+            }, 3000);
         }
     }
 

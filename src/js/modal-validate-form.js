@@ -29,12 +29,14 @@ export const formValidate = () => {
         if(name.value.length > 3 && textarea.value.length && !emailError.textContent) {
             btn.textContent = "идет отправка..."
             btn.classList.add('success')
-            success.style.display = "block"
             console.log({
                 name: name.value,
                 emai: email.value,
                 text: textarea.value
             });
+            setTimeout(() => {
+                success.style.display = "block"
+            }, 2000);
 
             setTimeout(() => {
                modal.style.display = 'none'
@@ -42,7 +44,7 @@ export const formValidate = () => {
                btn.textContent = "отправить"
                 btn.classList.remove('success')
                 success.style.display = "none"
-            }, 2000);
+            }, 3000);
 
         }
     }

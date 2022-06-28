@@ -18,8 +18,8 @@ block content
             img.train-pol-img.position-absolute(src="../../assets/img/Polygon.png", alt="")
             img.img-cube(src="../../assets/icons/cube-service-page.svg", alt="")
             h3.position-relative.title #{trainingData[0].title}
-            p.mt-3.mb-1 Для кого: #{trainingData[0].text}
-            p.mb-4 Цели бизнес-тренинга:
+            p.mt-3.mb-1.position-relative Для кого: #{trainingData[0].text}
+            p.mb-4.position-relative Цели бизнес-тренинга:
             .train-info__advan
                 each plan in trainingData[0].plans 
                     +list(plan)

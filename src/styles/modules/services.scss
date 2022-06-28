@@ -47,6 +47,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .ser-cube {
+        display: none;
+    }
+}
+
 @media (max-width: 540px) {
     .service-cards{
         margin: 33px 0 !important;

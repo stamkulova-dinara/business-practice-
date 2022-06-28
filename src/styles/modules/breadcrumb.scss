@@ -11,3 +11,9 @@
         color: #282C37;
     }
 }
+
+@media (max-width: 768px) {
+    .bread-crumb {
+        display: none;
+    }
+}
